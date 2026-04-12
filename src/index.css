@@ -1,0 +1,50 @@
+body {
+  margin: 0;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  display: grid;
+  justify-content: center;
+  height: 100dvh;
+  background-image: url('../public/FondoPage.png'); 
+  background-repeat: repeat;
+  background-size: 40px;
+  background-position: 10px 25px;
+  position: relative;
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(2px); 
+  -webkit-backdrop-filter: blur(8px);
+  background: #000000ba; 
+  z-index: 0;
+}
+
+#root{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.mainWrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 98%;
+  align-items: center;
+  justify-content: center;
+  background-color: #0000007c;
+  border-radius: 8px;
+  position: relative;
+  z-index: 1;
+}
+@media (max-width: 768px) {
+  .mainWrapper {
+    min-height: 100%;
+    border-radius: 0;
+    min-width: 100svw;
+  }
+}

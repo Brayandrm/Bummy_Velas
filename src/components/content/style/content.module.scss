@@ -1,0 +1,53 @@
+.content {
+    width: 350px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.linksContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+}
+
+.linkCard {
+    background-color: #00000078;
+    border: none;
+    padding: 14px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+    color: #fff;
+
+    &:hover {
+        transform: scale(1.02);
+
+    }
+}
+
+.logosContainer {
+    display: flex;
+    column-gap: 20px;
+    justify-content: end;
+    margin-top: 38px;
+
+    .icon {
+        width: 32px;
+        height: 32px;
+        cursor: pointer;
+        text-decoration: none;
+        color: #ffffff66;
+
+        :hover {
+            color: #fff;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .content {
+        max-width: 520px;
+    }
+}
