@@ -7,7 +7,7 @@ const Content = () => {
     <main className={styles.content}>
       <div className={styles.linksContainer}>
         <a
-          href="https://wa.me/573202781173?text=Hola%20quiero%20comprar"
+          href="https://wa.me/573202781173?text=Hola%2C%20buen%20día.%20Estoy%20interesado%20en%20las%20velas%20aromáticas%20de%20Bummy.%20¿Podrían%20brindarme%20más%20información%20sobre%20fragancias%2C%20precios%20y%20disponibilidad%3F"
           target="_blank"
           rel="noopener noreferrer"
           className={styles.linkCard}
