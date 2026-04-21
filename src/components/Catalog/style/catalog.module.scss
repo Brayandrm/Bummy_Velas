@@ -1,0 +1,55 @@
+.catalogContainer {
+ padding-inline: 1rem;
+    max-width: 540px;
+    margin: 0 auto;
+    overflow: scroll;
+    flex: 1;
+    min-height: 0;
+    height: 100%;
+
+
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 10px;
+  }
+
+  .productGrid {
+    display: grid;
+
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    padding-bottom: 2rem; 
+  }
+
+  .productCard {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    border: 1px solid #eee;
+
+    &:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .imageWrapper {
+      width: 100%;
+      height: auto;
+      
+      .svgImage {
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: contain;
+      }
+    }
+  }
+}

@@ -16,8 +16,6 @@ body::after {
   content: "";
   position: absolute;
   inset: 0;
-  backdrop-filter: blur(2px); 
-  -webkit-backdrop-filter: blur(8px);
   background: #000000ba; 
   z-index: 0;
 }
@@ -28,6 +26,7 @@ body::after {
   align-items: center;
   position: relative;
   z-index: 1;
+  overflow: hidden;
 }
 
 .mainWrapper {
@@ -40,6 +39,7 @@ body::after {
   border-radius: 8px;
   position: relative;
   z-index: 1;
+  height: stretch;
 }
 @media (max-width: 768px) {
   .mainWrapper {

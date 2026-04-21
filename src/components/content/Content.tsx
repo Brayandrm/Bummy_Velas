@@ -1,8 +1,16 @@
 import { AiFillTikTok } from "react-icons/ai";
 import { RiInstagramFill } from "react-icons/ri";
+
 import styles from "./style/content.module.scss";
+import { ROUTES_PATH } from "../routes/routesPath";
 
 const Content = () => {
+  const navigate = (e: React.MouseEvent, path: string) => {
+    e.preventDefault();
+    window.history.pushState({}, "", path);
+    window.dispatchEvent(new PopStateEvent("popstate"));
+  };
+
   return (
     <main className={styles.content}>
       <div className={styles.linksContainer}>
@@ -14,7 +22,11 @@ const Content = () => {
         >
           Compras por WhatsApp
         </a>
-        <a href="#" className={styles.linkCard}>
+        <a 
+          href={ROUTES_PATH.catalog} 
+          className={styles.linkCard}
+          onClick={(e) => navigate(e, ROUTES_PATH.catalog)}
+        >
           Catalogo
         </a>
       </div>
