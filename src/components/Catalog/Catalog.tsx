@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styles from "./style/catalog.module.scss";
+import { IoLogoWhatsapp } from "react-icons/io";
 
 const Catalog = () => {
   const totalImages = 7;
@@ -18,8 +19,8 @@ const Catalog = () => {
         {images.map((num) => (
           <div key={num} className={styles.productCard}>
             {!allLoaded && <div className={styles.skeletonItem} />}
-            <div 
-              className={styles.imageWrapper} 
+            <div
+              className={styles.imageWrapper}
               style={{ display: allLoaded ? "block" : "none" }}
             >
               <img
@@ -32,6 +33,14 @@ const Catalog = () => {
           </div>
         ))}
       </div>
+      <a
+        href="https://wa.me/573202781173?text=Hola%2C%20buen%20día.%20Estoy%20interesado%20en%20las%20velas%20Bummy.%20¿Me%20comparten%20precios%20y%20disponibilidad%3F%20Gracias."
+        target="_blank"
+        rel="noopener noreferrer"
+        className={styles.containerButtonW}
+      >
+        <IoLogoWhatsapp className={styles.was} />
+      </a>
     </section>
   );
 };

@@ -1,6 +1,11 @@
 @keyframes loadingSkeleton {
-  0% { background-position: 200% 0; }
-  100% { background-position: -200% 0; }
+  0% {
+    background-position: 200% 0;
+  }
+
+  100% {
+    background-position: -200% 0;
+  }
 }
 
 .catalogContainer {
@@ -15,6 +20,7 @@
   &::-webkit-scrollbar {
     width: 6px;
   }
+
   &::-webkit-scrollbar-thumb {
     background: #ccc;
     border-radius: 8px;
@@ -22,7 +28,7 @@
 
   .productGrid {
     display: grid;
-    grid-template-columns: 1fr; 
+    grid-template-columns: 1fr;
     gap: 2rem;
     padding-bottom: 2rem;
   }
@@ -31,7 +37,7 @@
     background: #fff;
     border-radius: 15px;
     width: 100%;
-    min-height: 659px; 
+    min-height: 659px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -61,12 +67,36 @@
   }
 }
 
+.containerButtonW {
+  width: 64px;
+  height: 64px;
+  background-color: #fff;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.containerButtonW:hover {
+  transform: scale(1.1);
+}
+.was {
+  width: 40px;
+  height: 40px;
+  color: #000;
+}
+
 @media (max-width: 768px) {
   .catalogContainer {
     .productCard {
-      min-height: auto; 
-      aspect-ratio: 540 / 659; 
-      
+      min-height: auto;
+      aspect-ratio: 540 / 659;
+
       .skeletonItem {
         height: 100%;
       }
