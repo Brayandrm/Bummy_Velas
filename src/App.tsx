@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import "./App.css";
-import Content from "./components/content/Content";
-import { ROUTES_PATH } from "./components/routes/routesPath";
-import Catalog from "./components/Catalog/Catalog";
-import Footer from "./components/Footer/Footer";
-import Header from "./components/Header/Header";
+import Content from "./app/components/content/Content";
+import { ROUTES_PATH } from "./app/components/routes/routesPath";
+import Catalog from "./app/components/Catalog/Catalog";
+import Footer from "./app/components/Footer/Footer";
+import Header from "./app/components/Header/Header";
 
 function App() {
   const [path, setPath] = useState(window.location.pathname);

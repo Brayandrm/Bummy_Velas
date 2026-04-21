@@ -1,4 +1,4 @@
-import BummyLogo from "../../../public/Bummy_Circle.png";
+import BummyLogo from "../../../../public/Bummy_Circle.png";
 import styles from "./style/header.module.scss";
 
 const Header = () => {
